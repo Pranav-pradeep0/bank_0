@@ -1,0 +1,21 @@
+
+
+
+<div class="container text-white">
+    <div class="container bg-dark m-5 p-5 mx-auto w-50 login">
+        <h1 class="text-center">{{strintereg}}</h1>
+        <h2 class="text-center my-4">Sign in</h2>
+        <div class="mb-3 text-dark">
+        <input (change)="unameChange($event)" type="text" class="form-control text-dark" [placeholder]="placeholderData">
+          </div>
+          <div class=" text-dark">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+          </div>
+          <div class="d-grid gap-2 col-4 mx-auto mt-3">
+            <button (click)="login()" class="btn btn-outline-success" type="button">Sign in</button>
+          </div>
+          <div class="text-center mt-4">
+            <a class="" href="">Create Account</a>
+          </div> 
+    </div>
+</div>
