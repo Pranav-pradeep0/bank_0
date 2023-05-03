@@ -12,16 +12,26 @@ export class IndexpageComponent implements OnInit {
 
   placeholderData = "Enter User ID"
 
+  uname:any
+  pwd:any
+
   constructor () {}
 
   ngOnInit(): void{
   }
 
-  login(){
-    alert("Login Clicked")
+  login(a:any,b:any){
+    this.uname=a.value
+    this.pwd=b.value
+
+    console.log(this.uname,this.pwd);
+    
+
+    // alert("Login Clicked")
   }
 
-  unameChange(event:any){
-    console.log(event.target.value); //! target.value is the pathnwhere value lies
-  }
+  // unameChange(event:any){
+  //   console.log(event.target.value); //! target.value is the path where value lies
+  // }
+
 }
