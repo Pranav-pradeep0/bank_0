@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../service/data.service';
 
 @Component({
   selector: 'app-indexpage',
@@ -16,18 +15,13 @@ export class IndexpageComponent implements OnInit {
   uname:any
   psw:any
 
-  constructor (private ds:DataService) {}
+  constructor () {}
 
 
   ngOnInit(): void{
   }
 
   login(){
-
-    alert(this.ds.sdata) //!       calling variable
-    alert(this.ds.checkData()) //!    calling method
-    //calling both //* alert(`${this.ds.checkData()} ${this.ds.sdata}`)
-
 
     console.log(this.uname,this.psw);
   }
