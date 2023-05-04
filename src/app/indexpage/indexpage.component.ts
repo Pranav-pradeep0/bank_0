@@ -26,6 +26,7 @@ export class IndexpageComponent implements OnInit {
 
     alert(this.ds.sdata) //!       calling variable
     alert(this.ds.checkData()) //!    calling method
+    //calling both //* alert(`${this.ds.checkData()} ${this.ds.sdata}`)
 
 
     console.log(this.uname,this.psw);
