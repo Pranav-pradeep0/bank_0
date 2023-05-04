@@ -6,13 +6,13 @@
         <h1 class="text-center">{{strintereg}}</h1>
         <h2 class="text-center my-4">Sign in</h2>
         <div class="mb-3 text-dark">
-            <input #uname type="text" class="form-control text-dark" [placeholder]="placeholderData">
+            <input [(ngModel)]="uname" name="id" id="id" type="text" class="form-control text-dark" [placeholder]="placeholderData">
           </div>
           <div class=" text-dark">
-            <input #pwd type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <input [(ngModel)]="psw" name="password" type="password" class="form-control" id="password" placeholder="Password">
           </div>
           <div class="d-grid gap-2 col-4 mx-auto mt-4">
-            <button (click)="login(uname,pwd)" class="btn btn-outline-success" type="button">Sign in</button>
+            <button (click)="login()" class="btn btn-outline-success" type="button">Sign in</button>
           </div>
           <div class="text-center mt-4">
             <a class="" href="">Create Account</a>

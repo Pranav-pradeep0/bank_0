@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../service/data.service';
 
 @Component({
   selector: 'app-indexpage',
@@ -13,25 +14,41 @@ export class IndexpageComponent implements OnInit {
   placeholderData = "Enter User ID"
 
   uname:any
-  pwd:any
+  psw:any
 
-  constructor () {}
+  constructor (private ds:DataService) {}
+
 
   ngOnInit(): void{
   }
 
-  login(a:any,b:any){
-    this.uname=a.value
-    this.pwd=b.value
+  login(){
 
-    console.log(this.uname,this.pwd);
-    
+    alert(this.ds.sdata) //!       calling variable
+    alert(this.ds.checkData()) //!    calling method
 
-    // alert("Login Clicked")
+
+    console.log(this.uname,this.psw);
   }
+
+}
+
+
+
+
+
+
 
   // unameChange(event:any){
   //   console.log(event.target.value); //! target.value is the path where value lies
+  //   login(a:any,b:any){
+  //   this.uname=a.value
+  //   this.pwd=b.value
+
+  //   console.log(this.uname,this.pwd);
+    
+
+  // alert("Login Clicked")
   // }
 
-}
+
