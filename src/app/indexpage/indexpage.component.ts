@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-indexpage',
@@ -15,7 +16,7 @@ export class IndexpageComponent implements OnInit {
   uname:any
   psw:any
 
-  constructor () {}
+  constructor (private rout:Router) {}
 
 
   ngOnInit(): void{
@@ -24,26 +25,8 @@ export class IndexpageComponent implements OnInit {
   login(){
 
     console.log(this.uname,this.psw);
+
+    this.rout.navigateByUrl("home")
+
   }
-
 }
-
-
-
-
-
-
-
-  // unameChange(event:any){
-  //   console.log(event.target.value); //! target.value is the path where value lies
-  //   login(a:any,b:any){
-  //   this.uname=a.value
-  //   this.pwd=b.value
-
-  //   console.log(this.uname,this.pwd);
-    
-
-  // alert("Login Clicked")
-  // }
-
-
